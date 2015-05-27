@@ -4,12 +4,13 @@
  * as it act as a delegate to render message view. The builder is a link between the model and the 
  * view; For a given model, there is a corresponding builder; Thus, the chat widget remain the same,
  * as it delegates the rendering to its builder that can be customized and changed with the model.
+ *
+ *
+ * @private
+ * @property {Object} _styles A style preset to be used for every builder 
+ * @property {Object} _styles.row A JSON representation of the tss associated to a row
  */
-
-/** @attr {Object} styles A style preset to be used for every builder 
- *  @param {Object} styles.row A JSON representation of the tss associated to a row
- */
-$.styles = {
+$._styles = {
     row: $.createStyle({ classes: ['row'] })
 };
 
@@ -26,11 +27,14 @@ function getBuilder (name, args) {
     return {
         build: function (message) {
             var row = Ti.UI.createTableViewRow();
-            row.applyProperties($.styles.row);
+            row.applyProperties($._styles.row);
             builder.build(row, message);
             return row;
         }
     };
 }
+
+
+
 
 exports.getFactory = getFactory;

@@ -1,6 +1,42 @@
+/** 
+ * @class builders.messengerLikeBuilder
+ * @extends builders.MessageBuilder
+ * Use to build message that looks like a bit like messenger style.
+ *
+ * @private
+ * @property {String} _user The current user of the app.
+ *
+ * @private 
+ * @property {Object} _styles Styles used to stylish the different views
+ * @property {Object} _styles.outerBubble The external container style
+ * @property {Object} _styles.contentReceived The content style for received messages
+ * @property {Object} _styles.contentSent The content style for sent messages
+ * @property {Object} _styles.bubbleReceived The inner container style for received messages
+ * @property {Object} _styles.bubbleSent The inner container style for sent messages
+ * @property {Object} _style.date Date helper style
+ *
+ * @private 
+ * @property {Number} _LONG_ENOUGH Minimal interval of time between two date display (in ms)
+ *
+ * @private 
+ * @property {Number} _previousOld The date of the last oldest message rendered
+ *
+ * @private
+ * @property {Number} _previousNew The date of the most recent message rendered
+ *
+ * @requires momentjs
+ */
+
 var moment = require('moment');
 
-/* Retrieve expected configuration */
+/** 
+ * @constructor
+ * @method construct
+ * Initialize the builder
+ *
+ * @param {Object} args Supplied arguments
+ * @param {String} args.user 
+ */
 (function construct (args) {
     if (args.user === undefined) {
         throw("Expecting a username to be supplied in order to build messages");
@@ -27,13 +63,12 @@ var moment = require('moment');
 })(arguments[0] || {});
 
 /**
- * Build a message accordingly with the given template 
+ * @method build
+ * Build a simple message; Messages here are Backbone models which contains at least
+ * 3 properties : author, date and content.
  *
- * @param {appcelerator: Titanium.UI.TableViewRow} The parent row
+ * @param {appcelerator: Titanium.UI.TableViewRow TableViewRow} The parent row
  * @param {Object} message The message to build. Should be an instance of the model.
- * @param {string} template The template of the message that select a correct style.
- *
- * @return {appcelerator: Titanium.UI.TableViewRow} The built row
  * */
 function build (row, message) {
     var views = {},
@@ -87,5 +122,8 @@ function build (row, message) {
         row.add(views.outerBubble);
     }
 }
+
+
+
 
 exports.build = build;
