@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ts.factory.chat 0.1</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="fragment" content="!">
+
+  
+
+  <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+  <link rel="stylesheet" href="resources/css/app-b45e0623fa4eb1e1c70a70550106b25a.css" type="text/css" />
+  <link rel="stylesheet" href="styles-6a2c51222b129359149a5b48115b9f23.css" type="text/css" />
+
+  <script type="text/javascript" src="extjs/ext-all.js"></script>
+  <script type="text/javascript" src="data-bc88db2e6a5a124f8fdb963abd77bcc8.js"></script>
+
+  <script type="text/javascript" src="app-31307dd847860d30cd701596bf1390da.js"></script>
+
+  
+
+</head>
+<body id="ext-body">
+
+  <div id="loading"><span class="title">ts.factory.chat 0.1</span><span class="logo"></span></div>
+
+  <div id="header-content">ts.factory.chat 0.1</div>
+  <div id='welcome-content' style='display:none'><div class="markdown"><h2>Chat Message Builders Factory</h2>
+
+<p>This widget is extremely linked to <a href="https://github.com/thesmiths-widgets/ts.chat">ts.chat widget</a>
+as it gives a way to generate builders for the chat widget.
+In this way, the chat widget could <strong>delegate</strong> the rendering to an external component and focus on
+its other concerns. Following a MVC pattern, the chat widget represents the main controller which
+knows how to handle differents views; However, it doesn't know hot to display a single view; This is
+the role of builders.</p>
+
+<p>Detailed documentation can be found here : <a href="https://thesmiths-widgets/ts.messageBuilderFactory">documentation</a></p>
+
+<h3>Builders</h3>
+
+<p>Builders are simple <strong>Alloy controllers</strong> that should export one unique method <code>build</code>; This method
+will be used to transform a Message object into a view. The real type of the messsage object depends
+on what kind of model is used to represent it; To one kind of model, there is one builder. Both
+are complementary.</p>
+
+<h4>Messenger-like</h4>
+
+<p>There is for the moment only one builder supplied with the factory; This is the <em>messenger-like</em>
+builder which look like this :</p>
+
+<div style="width=100%; text-align: center">
+![messenger-like](images/messenger-like.png)
+</div>
+
+
+<p>One supposed that the model is a <strong>Backbone model</strong> which gives access to at least an <em>author</em>, a
+<em>content</em> and a <em>date</em>.</p>
+
+<h4>Custom builders</h4>
+
+<p>One may add an additional builders by following the required pattern (see MessageBuilder interface
+in [documentation][ddoc]) and putting his file alongside
+the factory (<em>widget.js</em>). Then, the builder will be available from the outside.</p>
+
+<p>The factory is in charge of creating the final container which is a <em>TableViewRow</em> and supplies it
+to all builders. A builder should only populate this container with formated data. In other words,
+builder are kind of templates for the inner-content of a <em>TableViewRow</em>.</p>
+
+<h3>How it works</h3>
+
+<p>From any app or widget which may used the <a href="https://github.com/thesmiths-widgets/ts.chat">ts.chat widget</a>, just get an instance of a
+builder by using :</p>
+
+<pre><code class="javascript">    var msgBuilder = Alloy
+        .createWidget('ts.messageBuilderFactory')
+        .getBuilder(/*&lt;builder-name&gt;*/, {
+            /* &lt;builder-conf&gt; ,
+            ... */
+        });
+
+    // or, depending of the context
+
+    var msgBuilder = Widget
+        .createWidget('ts.messageBuilderFactory')
+        .getBuilder(/*&lt;builder-name&gt;*/, {
+            /* &lt;builder-conf&gt;,
+            ... */
+        });
+</code></pre>
+
+<p>Then, just supply the builder to the <a href="https://github.com/thesmiths-widgets/ts.chat">ts.chat widget</a></p>
+
+<h3>TODO</h3>
+
+<ul>
+<li>Create some other builders</li>
+<li>Add a <em>clean</em> function to the factory and the existing builders</li>
+<li>Write some tests on the test branch</li>
+</ul>
+
+</div></div>
+            <div id='categories-content' style='display:none'>
+            <div class='section'>
+<h1>builders</h1>
+<div class='left-column'>
+<h3>Others...</h3>
+<ul class='links'>
+<li><a href="#!/api/builders.MessageBuilder" rel="builders.MessageBuilder" class="docClass">builders.MessageBuilder</a></li>
+<li><a href="#!/api/builders.messengerLikeBuilder" rel="builders.messengerLikeBuilder" class="docClass">builders.messengerLikeBuilder</a></li>
+</ul>
+</div>
+<div class='middle-column'>
+</div>
+<div class='right-column'>
+</div>
+<div style='clear:both'></div>
+</div>
+<div class='section'>
+<h1>Others...</h1>
+<div class='left-column'>
+<h3>Others...</h3>
+<ul class='links'>
+<li><a href="#!/api/messageBuilderFactory" rel="messageBuilderFactory" class="docClass">messageBuilderFactory</a></li>
+</ul>
+</div>
+<div class='middle-column'>
+</div>
+<div class='right-column'>
+</div>
+<div style='clear:both'></div>
+</div>
+          </div>
+
+  
+  
+  <div id='footer-content' style='display: none'>TheSmiths - copyright  2015</div>
+
+  
+
+  <script type="text/javascript">
+  (function(){
+    var protocol = (document.location.protocol === "https:") ? "https:" : "http:";
+    document.write("<link href='"+protocol+"//fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css' />");
+  })();
+  </script>
+
+</body>
+</html>
