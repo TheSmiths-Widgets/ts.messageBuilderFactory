@@ -7,6 +7,10 @@
  * The builder is a link between the model and the view; For a given model, there is a corresponding
  * builder; Thus, the chat widget remain the same, as it delegates the rendering to its builder
  * that can be customized and changed with the model.
+ *
+ *
+ * Available builders :  
+ * - **messenger-like**  
  */
 
  /**
@@ -24,7 +28,7 @@ $._styles = {
  *
  * @param {String} name Name of the builder. For the moment, only 'messenger-like' is available.
  * @param {Object} args Arguments to pass to the builder
- * @return {thesmiths: MessageBuilder}
+ * @return {builders.MessageBuilder}
  */
 function getBuilder (name, args) {
     var builder = Widget.createController(name, args);

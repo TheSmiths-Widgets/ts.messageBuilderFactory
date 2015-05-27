@@ -9,6 +9,7 @@
 var moment = require('moment');
 
 /** 
+ * @private
  * @constructor
  * @method construct
  * Initialize the builder
@@ -35,7 +36,7 @@ var moment = require('moment');
     * @property {Object} _styles.contentSent The content style for sent messages
     * @property {Object} _styles.bubbleReceived The inner container style for received messages
     * @property {Object} _styles.bubbleSent The inner container style for sent messages
-    * @property {Object} _style.date Date helper style
+    * @property {Object} _styles.date Date helper style
     */
     $._styles = {
         outerBubble: $.createStyle({ classes: ['outerBubble'] }),
@@ -73,7 +74,7 @@ var moment = require('moment');
  * Build a simple message; Messages here are Backbone models which contains at least
  * 3 properties : author, date and content.
  *
- * @param {appcelerator: Titanium.UI.TableViewRow TableViewRow} The parent row
+ * @param {appcelerator: Titanium.UI.TableViewRow TableViewRow} row The parent row
  * @param {Object} message The message to build. Should be an instance of the model.
  * */
 function build (row, message) {

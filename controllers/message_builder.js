@@ -17,9 +17,10 @@ function build (row, message) { };
 /**
  * @private
  * @method construct
+ * @constructor
  *
  * Initialize the builder; Called when the widget is created with given arguments.
- * @params {Object} args
+ * @param {Object} args Arguments to supply to the widget
  */
 (function construct (args) { })(arguments[0] || {});
 
