@@ -1,4 +1,11 @@
 ## Chat Message Builders Factory
+[![Appcelerator
+Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](http://appcelerator.com/titanium/)
+[![Appcelerator
+Alloy](http://www-static.appcelerator.com/badges/alloy-git-badge-sq.png)](http://appcelerator.com/alloy/)
+[![License](http://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://choosealicense.com/licenses/apache-2.0/)
+
+
 This widget is extremely linked to [ts.chat widget][tschat]
 as it gives a way to generate builders for the chat widget.
 In this way, the chat widget could **delegate** the rendering to an external component and focus on
@@ -71,4 +78,4 @@ current version in use (2.10.2) has been included in the lib folder.
 [![wearesmiths](http://wearesmiths.com/media/logoGitHub.png)](http://wearesmiths.com)
 
 [tschat]: https://github.com/thesmiths-widgets/ts.chat
-[doc]: https://thesmiths-widgets/ts.messageBuilderFactory
+[doc]: https://thesmiths-widgets.github.io/ts.messageBuilderFactory
