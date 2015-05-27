@@ -3,27 +3,6 @@
  * @extends builders.MessageBuilder
  * Use to build message that looks like a bit like messenger style.
  *
- * @private
- * @property {String} _user The current user of the app.
- *
- * @private 
- * @property {Object} _styles Styles used to stylish the different views
- * @property {Object} _styles.outerBubble The external container style
- * @property {Object} _styles.contentReceived The content style for received messages
- * @property {Object} _styles.contentSent The content style for sent messages
- * @property {Object} _styles.bubbleReceived The inner container style for received messages
- * @property {Object} _styles.bubbleSent The inner container style for sent messages
- * @property {Object} _style.date Date helper style
- *
- * @private 
- * @property {Number} _LONG_ENOUGH Minimal interval of time between two date display (in ms)
- *
- * @private 
- * @property {Number} _previousOld The date of the last oldest message rendered
- *
- * @private
- * @property {Number} _previousNew The date of the most recent message rendered
- *
  * @requires momentjs
  */
 
@@ -42,9 +21,22 @@ var moment = require('moment');
         throw("Expecting a username to be supplied in order to build messages");
     }
 
+    /**
+    * @private
+    * @property {String} _user The current user of the app.
+    */
     $._user = args.user;
 
-    /* Handle available styling for each message */
+    /**
+    * @private 
+    * @property {Object} _styles Styles used to stylish the different views
+    * @property {Object} _styles.outerBubble The external container style
+    * @property {Object} _styles.contentReceived The content style for received messages
+    * @property {Object} _styles.contentSent The content style for sent messages
+    * @property {Object} _styles.bubbleReceived The inner container style for received messages
+    * @property {Object} _styles.bubbleSent The inner container style for sent messages
+    * @property {Object} _style.date Date helper style
+    */
     $._styles = {
         outerBubble: $.createStyle({ classes: ['outerBubble'] }),
         contentReceived: $.createStyle({ classes: ['message', 'messageReceived'] }),
@@ -56,8 +48,22 @@ var moment = require('moment');
     $._styles.outerBubbleReceived = $._styles.outerBubbleSent = $._styles.outerBubble;
 
     /* We'll also handle some date so that we can display a date helper sometimes */
+    /**
+    * @private 
+    * @property {Number} _LONG_ENOUGH Minimal interval of time between two date display (in ms)
+    */
     $._LONG_ENOUGH = 1000 * 30 * 60; /* 30 minutes */
+
+    /**
+    * @private 
+    * @property {Number} _previousOld The date of the last oldest message rendered
+    */
     $._previousOld = 0;
+
+    /**
+    * @private
+    * @property {Number} _previousNew The date of the most recent message rendered
+    */
     $._previousNew = 0;
 
 })(arguments[0] || {});

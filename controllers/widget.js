@@ -1,11 +1,15 @@
 /**
  * @class messageBuilderFactory
- * This widget can be use to generate a MessageBuilder; It is highly linked with the ts.chat widget
- * as it act as a delegate to render message view. The builder is a link between the model and the 
- * view; For a given model, there is a corresponding builder; Thus, the chat widget remain the same,
- * as it delegates the rendering to its builder that can be customized and changed with the model.
+ * This widget can be use to generate a MessageBuilder; It is highly linked with the [ts.chat
+ * widget](https://github.com/thesmiths-widgets/ts.chat)
+ * as it act as a delegate to render message view.  
  *
- *
+ * The builder is a link between the model and the view; For a given model, there is a corresponding
+ * builder; Thus, the chat widget remain the same, as it delegates the rendering to its builder
+ * that can be customized and changed with the model.
+ */
+
+ /**
  * @private
  * @property {Object} _styles A style preset to be used for every builder 
  * @property {Object} _styles.row A JSON representation of the tss associated to a row
