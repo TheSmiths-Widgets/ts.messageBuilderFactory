@@ -57,9 +57,5 @@ Then, just supply the builder to the [ts.chat widget][tschat]
 - Write some tests on the test branch
 
 
-[![wearesmiths](http://wearesmiths.com/media/logoGitHub.png)](http://wearesmiths.com)
-
-
-
 [tschat]: https://github.com/thesmiths-widgets/ts.chat
 [doc]: https://thesmiths-widgets/ts.messageBuilderFactory
