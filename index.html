@@ -27,6 +27,12 @@
   <div id="header-content">ts.factory.chat 0.1</div>
   <div id='welcome-content' style='display:none'><div class="markdown"><h2>Chat Message Builders Factory</h2>
 
+<p><a href="http://appcelerator.com/titanium/"><img src="http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png" alt="Appcelerator
+Titanium" /></a>
+<a href="http://appcelerator.com/alloy/"><img src="http://www-static.appcelerator.com/badges/alloy-git-badge-sq.png" alt="Appcelerator
+Alloy" /></a>
+<a href="http://choosealicense.com/licenses/apache-2.0/"><img src="http://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat" alt="License" /></a></p>
+
 <p>This widget is extremely linked to <a href="https://github.com/thesmiths-widgets/ts.chat">ts.chat widget</a>
 as it gives a way to generate builders for the chat widget.
 In this way, the chat widget could <strong>delegate</strong> the rendering to an external component and focus on
@@ -34,7 +40,7 @@ its other concerns. Following a MVC pattern, the chat widget represents the main
 knows how to handle differents views; However, it doesn't know hot to display a single view; This is
 the role of builders.</p>
 
-<p>Detailed documentation can be found here : <a href="https://thesmiths-widgets/ts.messageBuilderFactory">documentation</a></p>
+<p>Detailed documentation can be found here : <a href="https://thesmiths-widgets.github.io/ts.messageBuilderFactory">documentation</a></p>
 
 <h3>Builders</h3>
 
@@ -49,7 +55,7 @@ are complementary.</p>
 builder which look like this :</p>
 
 <div style="width=100%; text-align: center">
-![messenger-like](images/messenger-like.png)
+![messenger-like](https://github.com/thesmiths-widgets/ts.messageBuilderFactory/blob/doc/images/messenger-like.png)
 </div>
 
 
@@ -89,6 +95,13 @@ builder by using :</p>
 </code></pre>
 
 <p>Then, just supply the builder to the <a href="https://github.com/thesmiths-widgets/ts.chat">ts.chat widget</a></p>
+
+<h3>Dependencies</h3>
+
+<h4>messenger-like builder</h4>
+
+<p>This builder has a dependency to <a href="http://momentjs.com/docs/">momentJS</a> as commonJS module. The
+current version in use (2.10.2) has been included in the lib folder.</p>
 
 <h3>TODO</h3>
 
