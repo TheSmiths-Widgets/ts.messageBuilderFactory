@@ -19,7 +19,7 @@ There is for the moment only one builder supplied with the factory; This is the 
 builder which look like this :
 
 <div style="width=100%; text-align: center">
-![messenger-like](images/messenger-like.png)
+![messenger-like](https://github.com/thesmiths-widgets/ts.messageBuilderFactory/blob/doc/images/messenger-like.png)
 </div>
 
 One supposed that the model is a **Backbone model** which gives access to at least an *author*, a
