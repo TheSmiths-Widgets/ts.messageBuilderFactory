@@ -45,4 +45,4 @@ function getBuilder (name, args) {
 
 
 
-exports.getFactory = getFactory;
+exports.getBuilder = getBuilder;
