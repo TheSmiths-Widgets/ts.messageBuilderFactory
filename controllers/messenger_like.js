@@ -6,7 +6,7 @@
  * @requires momentjs
  */
 
-var moment = require('moment');
+var moment = require(WPATH('moment'));
 
 /** 
  * @private

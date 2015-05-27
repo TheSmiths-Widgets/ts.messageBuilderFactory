@@ -58,6 +58,11 @@ builder by using :
 
 Then, just supply the builder to the [ts.chat widget][tschat]
 
+### Dependencies
+#### messenger-like builder
+This builder has a dependency to [momentJS](http://momentjs.com/docs/) as commonJS module. The
+current version in use (2.10.2) has been included in the lib folder. 
+
 ### TODO
 - Create some other builders
 - Add a *clean* function to the factory and the existing builders
