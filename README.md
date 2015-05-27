@@ -18,7 +18,9 @@ are complementary.
 There is for the moment only one builder supplied with the factory; This is the *messenger-like*
 builder which look like this :
 
-![messenger-like](images/messenger-like.png)
+<div style="width=100%; text-align: center">
+![messenger-like](https://github.com/thesmiths-widgets/ts.messageBuilderFactory/blob/doc/images/messenger-like.png)
+</div>
 
 One supposed that the model is a **Backbone model** which gives access to at least an *author*, a
 *content* and a *date*.
@@ -37,17 +39,21 @@ From any app or widget which may used the [ts.chat widget][tschat], just get an 
 builder by using :
 
 ```javascript
-    var msgBuilder = Alloy.createWidget('ts.messageBuilderFactory').getBuilder(/*<builder-name>*/, {
-        /* <builder-conf> ,
-        ... */
-    });
+    var msgBuilder = Alloy
+        .createWidget('ts.messageBuilderFactory')
+        .getBuilder(/*<builder-name>*/, {
+            /* <builder-conf> ,
+            ... */
+        });
 
     // or, depending of the context
 
-    var msgBuilder = Widget.createWidget('ts.messageBuilderFactory').getBuilder(/*<builder-name>*/, {
-        /* <builder-conf>,
-        ... */
-    });
+    var msgBuilder = Widget
+        .createWidget('ts.messageBuilderFactory')
+        .getBuilder(/*<builder-name>*/, {
+            /* <builder-conf>,
+            ... */
+        });
 ```
 
 Then, just supply the builder to the [ts.chat widget][tschat]
