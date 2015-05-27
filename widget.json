@@ -1,6 +1,6 @@
 {
-	"id": "ts.factory.chatMessage",
-	"name": "ts.factory.chatMessage",
+	"id": "ts.messageBuilderFactory",
+	"name": "ts.messageBuilderFactory",
 	"description" : "",
 	"author": "",
 	"version": "1.0",
